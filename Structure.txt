@@ -1,0 +1,21 @@
+EntrepreneurHub/
+│── src/
+│   ├── models/
+│   │    ├── User.java
+│   │    ├── Entrepreneur.java
+│   │    ├── Investor.java
+│   │    ├── Admin.java
+│   │    ├── Idea.java
+│   │    └── Agreement.java
+│   ├── communication/
+│   │    ├── Communication.java
+│   │    └── CommunicationImpl.java
+│   ├── pages/
+│   │    ├── Page.java
+│   │    ├── LoginPage.java
+│   │    ├── SignUpPage.java
+│   │    ├── HomePage.java
+│   │    ├── EntrepreneurPage.java
+│   │    ├── InvestorPage.java
+│   │    └── AdminPage.java
+│   └── Main.java
