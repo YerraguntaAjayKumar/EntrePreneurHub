@@ -1,0 +1,30 @@
+src
+├── communication
+│   ├── Communication.java
+│   ├── CommunicationImpl.java
+│   ├── ChatSession.java
+│   └── VideoSession.java
+├── models
+│   ├── User.java
+│   ├── Admin.java
+│   ├── Entrepreneur.java
+│   ├── Investor.java
+│   ├── Idea.java
+│   ├── Agreement.java
+│   └── Project.java
+├── pages
+│   ├── Page.java
+│   ├── LoginPage.java
+│   ├── SignUpPage.java
+│   ├── HomePage.java
+│   ├── EntrepreneurPage.java
+│   ├── InvestorPage.java
+│   └── AdminPage.java
+├── repository
+│   ├── UserRepository.java
+│   ├── IdeaRepository.java
+│   └── AgreementRepository.java
+├── utils
+│   ├── FileUtil.java
+│   └── ValidationUtil.java
+└── Main.java
