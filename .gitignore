@@ -1,0 +1,33 @@
+# Compiled Java classes
+*.class
+bin/
+dao/
+models/
+db/
+ui/
+Main.class
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build and output
+target/
+build/
+dist/
+
+# Database files
+*.db
+*.h2.db
+*.mv.db
+*.trace.db
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
