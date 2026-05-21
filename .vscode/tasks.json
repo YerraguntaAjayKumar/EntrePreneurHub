@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build EntrepreneurHub",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$files = Get-ChildItem -Recurse -Filter *.java src | Select-Object -ExpandProperty FullName; javac -d bin -cp lib/ojdbc8.jar $files"
+			]
+		},
+		{
+			"label": "Run EntrepreneurHub",
+			"type": "shell",
+			"command": "java",
+			"args": [
+				"-cp",
+				"bin;lib/ojdbc8.jar",
+				"Main"
+			],
+			"isBackground": false
+		}
+	]
+}

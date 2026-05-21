@@ -1,0 +1,45 @@
+DROP TABLE agreement CASCADE CONSTRAINTS;
+DROP TABLE project CASCADE CONSTRAINTS;
+DROP TABLE idea CASCADE CONSTRAINTS;
+DROP TABLE users CASCADE CONSTRAINTS;
+
+CREATE TABLE users (
+    user_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    email VARCHAR2(100),
+    password VARCHAR2(100),
+    fname VARCHAR2(50),
+    lname VARCHAR2(50),
+    role VARCHAR2(20),
+    status VARCHAR2(20) DEFAULT 'PENDING'
+);
+
+CREATE TABLE idea (
+    idea_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    user_id NUMBER,
+    title VARCHAR2(100),
+    description VARCHAR2(300),
+    status VARCHAR2(20) DEFAULT 'OPEN'
+);
+
+CREATE TABLE project (
+    project_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    idea_id NUMBER,
+    investor_id NUMBER,
+    status VARCHAR2(20) DEFAULT 'STARTED'
+);
+
+CREATE TABLE agreement (
+    agreement_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    project_id NUMBER,
+    terms VARCHAR2(300),
+    start_date DATE,
+    end_date DATE
+);
+
+CREATE TABLE messages (
+    message_id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    sender_id NUMBER,
+    receiver_id NUMBER,
+    message VARCHAR2(500),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
